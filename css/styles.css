@@ -5,8 +5,11 @@
     --logo-color:#000000;
     --white-color:#ffffff;
     --buttons-color:#F5F4FA;
+    --address-color:rgba(255, 255, 255, 0.6);
+    --button-active:#188CE8;
 }
 
+.team-list,
 .list{
     list-style: none;
 }
@@ -17,10 +20,10 @@
 
 body{
     font-family: Roboto, sans-serif;
-    font-style: normal;
     /* identical to box height */
     letter-spacing: 0.03em;
     color: var(--primary-color);
+    background-color: var(--white-color);
 }
 
 /* шапка сайту з навігацією*/
@@ -60,10 +63,21 @@ body{
 
 .site-nav-current{
     color: var(--accent-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .auth-nav{
     color: var(--secondary-color);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 }
 
 .auth-nav:hover,
@@ -99,21 +113,19 @@ body{
 .address-street {
     color: var(--white-color);
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
 }
 
 .footer-nav {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--address-color);
 
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+}
+
+.address{
+    font-style: normal;
 }
 
 .address-street:hover,
@@ -152,6 +164,27 @@ body{
 .button{
     background-color: var(--accent-color);
     color: var(--white-color);
+    
+    cursor: pointer;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    /* identical to box height, or 188% */
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--button-active)
 }
 
 /*Секція особливості*/
@@ -160,8 +193,16 @@ body{
     background-color: var(--white-color);
 }
 
-.features-title{
-    color: var(--primary-color);
+.visually-hidden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: 1px;
 }
 
 .features-subtitle{
@@ -174,8 +215,7 @@ body{
 
 .features-text{
     color: var(--secondary-color);
-
-    font-weight: 400;
+ 
     font-size: 14px;
     line-height: 1.71;
 }
@@ -200,6 +240,10 @@ body{
     background-color: #F5F4FA;
 }
 
+.team-item{
+    background-color: #FFFFFF;
+}
+
 .team-title {
     color: var(--primary-color);
 
@@ -220,20 +264,31 @@ body{
 .team-text{
     color: var(--secondary-color);
 
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
 }
 
 /*Сторінка Портфоліо*/
 
-.buttons .button{
+.button-portfolio{
     background-color: var(--buttons-color);
     color: var(--primary-color);
+
+    cursor: pointer;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    /* identical to box height, or 162% */
+    
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
-.buttons .button:hover,
-.buttons .button:focus{
+.button-portfolio:hover,
+.button-portfolio:focus{
     background-color: var(--accent-color);
     color: var(--white-color);
 }
@@ -257,7 +312,6 @@ body{
 .project-text {
     color: var(--secondary-color);
 
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.87;
 }
