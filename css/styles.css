@@ -12,10 +12,8 @@
 .team-list,
 .list{
     list-style: none;
-}
-
-.link{
-    text-decoration: none;
+    margin: 0;
+    padding: 0; 
 }
 
 body{
@@ -27,6 +25,34 @@ body{
 }
 
 /* шапка сайту з навігацією*/
+
+.header
+
+.container-nav{
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav .link-studio {
+   
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.link-studio{
+    text-decoration: none;
+}
 
 .logostudio{
     color: var(--logo-color);
@@ -46,8 +72,28 @@ body{
     color: var(--accent-color);
 }
 
+.pages-nav{
+    display: flex;
+    margin-left: 93px;
+}
+
+.pages-nav .item + .item {
+    margin-left: 50px;
+}
+
+.pages-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.container-nav .list {
+    display: flex;
+}
 
 .site-nav{
+    text-decoration: none;
+
     color: var(--primary-color);
 
     font-weight: 500;
@@ -62,11 +108,27 @@ body{
 }
 
 .site-nav-current{
+    text-decoration: none;
+
     color: var(--accent-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+}
+
+.contact-nav {
+    margin-left: auto;
+}
+
+.contact-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contact-nav .item+.item {
+    margin-left: 50px;
 }
 
 .auth-nav{
@@ -147,6 +209,10 @@ body{
 }
 
 .hero-title{
+
+    margin-top: 0;
+    margin-bottom: 30px;
+
     color: var(--white-color);
 
     font-weight: 900;
@@ -161,7 +227,7 @@ body{
 
 /*Button*/
 
-.button{
+.button-hero{
     background-color: var(--accent-color);
     color: var(--white-color);
     
@@ -182,8 +248,8 @@ body{
     border-radius: 4px;
 }
 
-.button:hover,
-.button:focus {
+.button-hero:hover,
+.button-hero:focus {
     background-color: var(--button-active)
 }
 
@@ -191,13 +257,15 @@ body{
 
 .features{
     background-color: var(--white-color);
+    outline: 2px solid tomato;
 }
 
 .visually-hidden{
     position: absolute;
     white-space: nowrap;
     width: 1px;
-    height: 1px;overflow: hidden;
+    height: 1px;
+    overflow: hidden;
     border: 0;
     padding: 0;
     clip: rect(0 0 0 0);
@@ -206,6 +274,10 @@ body{
 }
 
 .features-subtitle{
+
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--primary-color);
 
     font-weight: 700;
@@ -214,6 +286,10 @@ body{
 }
 
 .features-text{
+
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--secondary-color);
  
     font-size: 14px;
